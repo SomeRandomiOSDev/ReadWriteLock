@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDF7562122A8CD2A002E11D4"
-               BuildableName = "ReadWriteLock_watchOS.framework"
+               BuildableName = "ReadWriteLock.framework"
                BlueprintName = "ReadWriteLock watchOS"
                ReferencedContainer = "container:ReadWriteLock.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF7562122A8CD2A002E11D4"
-            BuildableName = "ReadWriteLock_watchOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock watchOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF7562122A8CD2A002E11D4"
-            BuildableName = "ReadWriteLock_watchOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock watchOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>

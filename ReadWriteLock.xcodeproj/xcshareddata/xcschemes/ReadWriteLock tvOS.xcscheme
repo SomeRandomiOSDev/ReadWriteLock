@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDF7560522A8CD18002E11D4"
-               BuildableName = "ReadWriteLock_tvOS.framework"
+               BuildableName = "ReadWriteLock.framework"
                BlueprintName = "ReadWriteLock tvOS"
                ReferencedContainer = "container:ReadWriteLock.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF7560522A8CD18002E11D4"
-            BuildableName = "ReadWriteLock_tvOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock tvOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF7560522A8CD18002E11D4"
-            BuildableName = "ReadWriteLock_tvOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock tvOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF7560522A8CD18002E11D4"
-            BuildableName = "ReadWriteLock_tvOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock tvOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>

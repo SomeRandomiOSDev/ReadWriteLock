@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDF755E922A8CD03002E11D4"
-               BuildableName = "ReadWriteLock_macOS.framework"
+               BuildableName = "ReadWriteLock.framework"
                BlueprintName = "ReadWriteLock macOS"
                ReferencedContainer = "container:ReadWriteLock.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF755E922A8CD03002E11D4"
-            BuildableName = "ReadWriteLock_macOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock macOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF755E922A8CD03002E11D4"
-            BuildableName = "ReadWriteLock_macOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock macOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDF755E922A8CD03002E11D4"
-            BuildableName = "ReadWriteLock_macOS.framework"
+            BuildableName = "ReadWriteLock.framework"
             BlueprintName = "ReadWriteLock macOS"
             ReferencedContainer = "container:ReadWriteLock.xcodeproj">
          </BuildableReference>
