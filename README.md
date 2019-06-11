@@ -1,6 +1,7 @@
 ReadWriteLock
 ========
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/afba999f51a1463e965199e5c0c8c17c)](https://app.codacy.com/app/SomeRandomiOSDev/ReadWriteLock?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/ReadWriteLock&utm_campaign=Badge_Grade_Dashboard)
 [![License MIT](https://img.shields.io/cocoapods/l/ReadWriteLock.svg)](https://cocoapods.org/pods/ReadWriteLock)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ReadWriteLock.svg)](https://cocoapods.org/pods/ReadWriteLock) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
