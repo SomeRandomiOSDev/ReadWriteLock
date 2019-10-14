@@ -196,4 +196,19 @@ class ReadWriteLockTests: XCTestCase {
             wait.wait()
         }
     }
+
+    func testSynchronizedPropertyWrapper() {
+        //swiftlint:disable nesting let_var_whitespace
+        class Dummy {
+            @ReadWriteAtomic(initialValue: "String!")
+            var syncedString: String
+        }
+        //swiftlint:enable nesting let_var_whitespace
+
+        let dummy = Dummy()
+        XCTAssertEqual(dummy.syncedString, "String!")
+
+        dummy.syncedString = "String?"
+        XCTAssertEqual(dummy.syncedString, "String?")
+    }
 }
