@@ -197,6 +197,7 @@ class ReadWriteLockTests: XCTestCase {
         }
     }
 
+    #if swift(>=5.1)
     func testSynchronizedPropertyWrapper() {
         //swiftlint:disable nesting let_var_whitespace
         class Dummy {
@@ -211,4 +212,5 @@ class ReadWriteLockTests: XCTestCase {
         dummy.syncedString = "String?"
         XCTAssertEqual(dummy.syncedString, "String?")
     }
+    #endif // #if swift(>=5.1)
 }
