@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name         = "ReadWriteLock"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A Swifty Read-Write lock"
   s.description  = <<-DESC
                    A lightweight framework of a safe an easy implementation of a read-write lock for iOS, macOS, tvOS, and watchOS.
