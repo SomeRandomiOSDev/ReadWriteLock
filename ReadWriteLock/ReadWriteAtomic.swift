@@ -21,8 +21,8 @@ public struct ReadWriteAtomic<Value> {
 
     // MARK: Initialization
 
-    public init(initialValue: Value, _ lock: ReadWriteLock = ReadWriteLock()) {
-        self.value = initialValue
+    public init(wrappedValue: Value, _ lock: ReadWriteLock = ReadWriteLock()) {
+        self.value = wrappedValue
         self.lock = lock
     }
 
