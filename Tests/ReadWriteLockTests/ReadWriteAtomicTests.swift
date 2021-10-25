@@ -20,20 +20,27 @@ class ReadWriteAtomicTests: XCTestCase {
     // MARK: Test Methods
 
     func testGetAndSetValue() {
-        @ReadWriteAtomic var syncedString: String = "String!"
-        XCTAssertEqual(syncedString, "String!")
+        struct Dummy {
+            @ReadWriteAtomic var syncedString: String = "String!"
+        }
 
-        syncedString = "String?"
-        XCTAssertEqual(syncedString, "String?")
+        var dummy = Dummy()
+        XCTAssertEqual(dummy.syncedString, "String!")
+
+        dummy.syncedString = "String?"
+        XCTAssertEqual(dummy.syncedString, "String?")
     }
 
     func testGetAndSetValueWithBinding() {
+        struct StringDummy {
+            @ReadWriteAtomic var syncedString: String = "String!"
+        }
         struct Dummy {
             @ReadWriteAtomic.Binding var binding: String
         }
 
-        @ReadWriteAtomic var syncedString: String = "String!"
-        var dummy = Dummy(binding: $syncedString)
+        var stringDummy = StringDummy()
+        var dummy = Dummy(binding: stringDummy.$syncedString)
 
         //
 
@@ -54,12 +61,15 @@ class ReadWriteAtomicTests: XCTestCase {
 
     func testGetAndSetValueViaDynamicMemberLookup() {
         do {
+            class StringDummy {
+                var string = "String!"
+            }
             class Dummy {
-                var string: String = "String!"
+                @ReadWriteAtomic var dummy = StringDummy()
             }
 
-            @ReadWriteAtomic var dummy = Dummy()
-            let syncedString = $dummy.string
+            let dummy = Dummy()
+            let syncedString = dummy.$dummy.string
 
             //
 
@@ -69,12 +79,15 @@ class ReadWriteAtomicTests: XCTestCase {
             XCTAssertEqual(syncedString.wrappedValue, "String?")
         }
         do {
+            struct StringDummy {
+                var string = "String!"
+            }
             struct Dummy {
-                var string: String = "String!"
+                @ReadWriteAtomic var dummy = StringDummy()
             }
 
-            @ReadWriteAtomic var dummy = Dummy()
-            let syncedString = $dummy.string
+            var dummy = Dummy()
+            let syncedString = dummy.$dummy.string
 
             //
 
@@ -84,12 +97,15 @@ class ReadWriteAtomicTests: XCTestCase {
             XCTAssertEqual(syncedString.wrappedValue, "String?")
         }
         do {
-            struct Dummy {
+            struct StringDummy {
                 let string: String = "String!"
             }
+            struct Dummy {
+                @ReadWriteAtomic var dummy = StringDummy()
+            }
 
-            @ReadWriteAtomic var dummy = Dummy()
-            let syncedString = $dummy.string
+            var dummy = Dummy()
+            let syncedString = dummy.$dummy.string
 
             //
 
@@ -101,24 +117,34 @@ class ReadWriteAtomicTests: XCTestCase {
     }
 
     func testInitializeWithNullableValue() {
-        let lock = ReadWriteLock()
-        @ReadWriteAtomic(lock: lock) var value: String?
-        XCTAssertNil(value)
+        class Dummy {
+            @ReadWriteAtomic var value: String?
 
-        value = "String!"
-        XCTAssertNotNil(value)
-        XCTAssertEqual(value, "String!")
+            init() {
+                _value = ReadWriteAtomic(lock: ReadWriteLock())
+            }
+        }
+
+        let dummy = Dummy()
+        XCTAssertNil(dummy.value)
+
+        dummy.value = "String!"
+        XCTAssertNotNil(dummy.value)
+        XCTAssertEqual(dummy.value, "String!")
     }
 
     #if canImport(SwiftUI) && !(arch(arm) || arch(i386))
     @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
     func testGetAndSetValueWithSwiftUIBinding() {
+        struct StringDummy {
+            @ReadWriteAtomic var syncedString = "String!"
+        }
         struct Dummy {
             @Binding var binding: String
         }
 
-        @ReadWriteAtomic var syncedString: String = "String!"
-        let dummy = Dummy(binding: $syncedString.binding)
+        var stringDummy = StringDummy()
+        let dummy = Dummy(binding: stringDummy.$syncedString.binding)
 
         XCTAssertEqual(dummy.binding, "String!")
 
