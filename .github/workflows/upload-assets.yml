@@ -1,0 +1,49 @@
+name: Upload Assets
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Upload Assets
+    runs-on: macOS-latest
+    env:
+      TMPDIR: /tmp/.readwritelock.xcframework.build
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        ./scripts/xcframework.sh -output ${TMPDIR}/ReadWriteLock.xcframework
+
+    - name: Create Zip
+      run: |
+        cd ${TMPDIR}
+        zip -rX ReadWriteLock.xcframework.zip ReadWriteLock.xcframework
+
+    - name: Upload Zip
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{ env.TMPDIR }}/ReadWriteLock.xcframework.zip
+        asset_name: ReadWriteLock.xcframework.zip
+        asset_content_type: application/zip
+
+    - name: Create Tar
+      run: |
+        cd ${TMPDIR}
+        tar -zcvf ReadWriteLock.xcframework.tar.gz ReadWriteLock.xcframework
+
+    - name: Upload Tar
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{ env.TMPDIR }}/ReadWriteLock.xcframework.tar.gz
+        asset_name: ReadWriteLock.xcframework.tar.gz
+        asset_content_type: application/gzip

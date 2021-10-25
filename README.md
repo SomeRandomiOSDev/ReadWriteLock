@@ -1,20 +1,22 @@
-ReadWriteLock
-========
+# ReadWriteLock
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d30d31c29f17449481b97a04610ff5b9)](https://app.codacy.com/app/SomeRandomiOSDev/ReadWriteLock?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/ReadWriteLock&utm_campaign=Badge_Grade_Dashboard)
 [![License MIT](https://img.shields.io/cocoapods/l/ReadWriteLock.svg)](https://cocoapods.org/pods/ReadWriteLock)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ReadWriteLock.svg)](https://cocoapods.org/pods/ReadWriteLock) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
 [![Platform](https://img.shields.io/cocoapods/p/ReadWriteLock.svg)](https://cocoapods.org/pods/ReadWriteLock)
-[![Build](https://travis-ci.com/SomeRandomiOSDev/ReadWriteLock.svg?branch=master)](https://travis-ci.com/SomeRandomiOSDev/ReadWriteLock)
 [![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/ReadWriteLock/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/ReadWriteLock)
-[![Codacy](https://api.codacy.com/project/badge/Grade/afba999f51a1463e965199e5c0c8c17c)](https://app.codacy.com/app/SomeRandomiOSDev/ReadWriteLock?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/ReadWriteLock&utm_campaign=Badge_Grade_Dashboard)
+
+![Swift Package](https://github.com/SomeRandomiOSDev/ReadWriteLock/workflows/Swift%20Package/badge.svg)
+![Xcode Project](https://github.com/SomeRandomiOSDev/ReadWriteLock/workflows/Xcode%20Project/badge.svg)
+![Cocoapods](https://github.com/SomeRandomiOSDev/ReadWriteLock/workflows/Cocoapods/badge.svg)
+![Carthage](https://github.com/SomeRandomiOSDev/ReadWriteLock/workflows/Carthage/badge.svg)
 
 **ReadWriteLock** is a lightweight framework of a safe an easy implementation of a read-write lock for iOS, macOS, tvOS, and watchOS.
 
-Installation
---------
+## Installation
 
-**ReadWriteLock** is available through [CocoaPods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) and the [Swift Package Manager](https://swift.org/package-manager/).
+**ReadWriteLock** is available through [CocoaPods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) and the [Swift Package Manager](https://swift.org/package-manager/). 
 
 To install via CocoaPods, simply add the following line to your Podfile:
 
@@ -34,8 +36,7 @@ To install via the Swift Package Manager add the following line to your `Package
 .package(url: "https://github.com/SomeRandomiOSDev/ReadWriteLock.git", from: "1.0.0")
 ```
 
-Usage
---------
+## Usage
 
 First import **ReadWriteLock** at the top of your Swift file:
 
@@ -150,17 +151,14 @@ struct SynchronizedValue<T> {
 }
 ```
 
-Contributing
---------
+## Contributing
 
 If you have need for a specific feature or you encounter a bug, please open an issue. If you extend the functionality of **ReadWriteLock** yourself or you feel like fixing a bug yourself, please submit a pull request.
 
-Author
---------
+## Author
 
-Joseph Newton, somerandomiosdev@gmail.com
+Joe Newton, somerandomiosdev@gmail.com
 
-License
---------
+## License
 
 **ReadWriteLock** is available under the MIT license. See the `LICENSE` file for more info.

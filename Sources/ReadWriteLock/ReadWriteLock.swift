@@ -2,8 +2,7 @@
 //  ReadWriteLock.swift
 //  ReadWriteLock
 //
-//  Created by Joseph Newton on 6/6/19.
-//  Copyright © 2019 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 import Darwin
