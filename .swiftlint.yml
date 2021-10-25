@@ -4,11 +4,11 @@ disabled_rules:
   - cyclomatic_complexity
   - type_body_length
   - type_name
+  - comment_spacing
 
 opt_in_rules:
   - anyobject_protocol
   - array_init
-  - attributes
   - closure_end_indentation
   - closure_spacing
   - contains_over_first_not_nil
@@ -30,7 +30,6 @@ opt_in_rules:
   - vertical_parameter_alignment_on_call
   - pattern_matching_keywords
   - fatal_error_message
-  - implicit_return
   - implicitly_unwrapped_optional
   - joined_default_parameter
   - let_var_whitespace
@@ -59,3 +58,10 @@ opt_in_rules:
   - yoda_condition
 
 reporter: "xcode"
+
+function_body_length:
+  - 60 #warning
+
+identifier_name:
+  excluded:
+    - i

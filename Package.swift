@@ -5,7 +5,7 @@ let package = Package(
     name: "ReadWriteLock",
 
     platforms: [
-        .iOS("8.0"),
+        .iOS("9.0"),
         .macOS("10.10"),
         .tvOS("9.0"),
         .watchOS("2.0")
@@ -16,7 +16,9 @@ let package = Package(
     ],
 
     targets: [
-        .target(name: "ReadWriteLock", path: "ReadWriteLock"),
-        .testTarget(name: "ReadWriteLockTests", dependencies: ["ReadWriteLock"], path: "ReadWriteLockTests")
-    ]
+        .target(name: "ReadWriteLock"),
+        .testTarget(name: "ReadWriteLockTests", dependencies: ["ReadWriteLock"])
+    ],
+
+    swiftLanguageVersions: [.version("5")]
 )
